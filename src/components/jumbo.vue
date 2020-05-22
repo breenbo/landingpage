@@ -5,7 +5,7 @@
       <div class="title text-amber-13 text-h1 text-weight-thin">
         <div class="text-h4">Find your way,</div>
         <div class="q-mb-lg">Become yourself</div>
-        <q-form @submit="onSubmit" class="q-gutter-md q-mt-xl">
+        <q-form @submit="onSubmit" class="q-gutter-md q-my-xl">
           <q-input
             v-model="nickname"
             type="text"
@@ -32,8 +32,8 @@
             >
           </div>
         </q-form>
+        <socials />
       </div>
-      <!-- TODO: add social networks logos -->
     </q-card>
   </div>
 </template>
@@ -46,6 +46,7 @@
 
   @Component({
     //declare components{{{1
+    components: { socials: () => import('components/socials.vue') }
     //}}}
     //filter{{{1
     //filters: {
@@ -106,5 +107,6 @@
     position: absolute;
     top: 20%;
     right: 6%;
+    max-width: 38%;
   }
 </style>

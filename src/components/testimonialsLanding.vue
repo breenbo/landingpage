@@ -18,9 +18,9 @@
         </q-avatar>
         <q-card-section>
           <div class="text-h6">Our Changing Planet</div>
-          <div class="text-subtitle2">by John Doe</div>
+          <div class="text-grey-6 text-subtitle2">by John Doe</div>
         </q-card-section>
-        <q-card-section class="text-h5 text-grey-7">
+        <q-card-section class="text-h5 text-grey-7 q-pl-lg">
           Consectetur ab reiciendis perferendis obcaecati ea sint Quod
           consectetur recusandae eos voluptates vitae officiis? Quidem dolorum
           atque ratione ab deserunt. Voluptatibus reprehenderit consequatur
