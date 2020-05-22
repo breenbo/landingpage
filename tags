@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/ca0412ab/
+0	.vscode/extensions.json	/^    "dbaeumer.vscode-eslint",$/;"	s	array:recommendations
+0	.vscode/extensions.json	/^    "hookyqr.beautify",$/;"	s	array:unwantedRecommendations
+0	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	s	array:eslint.validate
+0	package.json	/^    "last 1 version, not dead, ie >= 11"$/;"	s	array:browserslist
+1	.vscode/extensions.json	/^    "dbaeumer.jshint",$/;"	s	array:unwantedRecommendations
+1	.vscode/extensions.json	/^    "esbenp.prettier-vscode",$/;"	s	array:recommendations
+1	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	s	array:eslint.validate
+2	.vscode/extensions.json	/^    "ms-vscode.vscode-typescript-tslint-plugin"$/;"	s	array:unwantedRecommendations
+2	.vscode/extensions.json	/^    "octref.vetur"$/;"	s	array:recommendations
+2	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	s	array:eslint.validate
+3	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	s	array:eslint.validate
+@babel/parser	package.json	/^    "@babel\/parser": "7.7.5"$/;"	s	object:resolutions
+@quasar/app	package.json	/^    "@quasar\/app": "^1.6.2",$/;"	s	object:devDependencies
+@quasar/extras	package.json	/^    "@quasar\/extras": "^1.0.0",$/;"	s	object:dependencies
+@types/node	package.json	/^    "@types\/node": "^10.17.15",$/;"	s	object:devDependencies
+@typescript-eslint/eslint-plugin	package.json	/^    "@typescript-eslint\/eslint-plugin": "^2.17.0",$/;"	s	object:devDependencies
+@typescript-eslint/parser	package.json	/^    "@typescript-eslint\/parser": "^2.17.0",$/;"	s	object:devDependencies
+AnonymousFunction99fb84710100	quasar.conf.js	/^module.exports = configure(function (ctx) {$/;"	f
+Build the app for production	README.md	/^### Build the app for production$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+Button	src/components/models.ts	/^export interface Button {$/;"	i
+Customize the configuration	README.md	/^### Customize the configuration$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+Install the dependencies	README.md	/^## Install the dependencies$/;"	s	chapter:landingPage (landingpagetemplate)
+Lint the files	README.md	/^### Lint the files$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+Meta	src/components/models.ts	/^export interface Meta {$/;"	i
+NODE_ENV	src/env.d.ts	/^    NODE_ENV: string;$/;"	p	interface:NodeJS.ProcessEnv
+NodeJS	src/env.d.ts	/^declare namespace NodeJS {$/;"	n
+ProcessEnv	src/env.d.ts	/^  interface ProcessEnv {$/;"	i	namespace:NodeJS
+Router	src/router/index.ts	/^  const Router = new VueRouter({$/;"	C
+Start the app in development mode (hot-code reloading, error reporting, etc.)	README.md	/^### Start the app in development mode (hot-code reloading, error reporting, etc.)$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+Todo	src/components/models.ts	/^export interface Todo {$/;"	i
+VUE_ROUTER_BASE	src/env.d.ts	/^    VUE_ROUTER_BASE: string | undefined;$/;"	p	interface:NodeJS.ProcessEnv
+VUE_ROUTER_MODE	src/env.d.ts	/^    VUE_ROUTER_MODE: 'hash' | 'history' | 'abstract' | undefined;$/;"	p	interface:NodeJS.ProcessEnv
+Vue	src/boot/i18n.ts	/^  interface Vue {$/;"	i
+author	package.json	/^  "author": "breenbo <berrehuelbruno@gmail.com>",$/;"	s
+babel-eslint	package.json	/^    "babel-eslint": "^10.0.1",$/;"	s	object:devDependencies
+baseUrl	tsconfig.json	/^    "baseUrl": ".",$/;"	s	object:compilerOptions
+browser	.eslintrc.js	/^    browser: true$/;"	p	class:module.exports.env
+browserslist	package.json	/^  "browserslist": [$/;"	a
+capacitorId	package.json	/^  "capacitorId": "",$/;"	s
+compilerOptions	tsconfig.json	/^  "compilerOptions": {$/;"	o
+content	src/components/models.ts	/^  content: string;$/;"	p	interface:Todo
+cordovaId	package.json	/^  "cordovaId": "org.cordova.quasar.app",$/;"	s
+dependencies	package.json	/^  "dependencies": {$/;"	o
+description	package.json	/^  "description": "Landing Page",$/;"	s
+devDependencies	package.json	/^  "devDependencies": {$/;"	o
+ecmaVersion	.eslintrc.js	/^    ecmaVersion: 2018, \/\/ Allows for the parsing of modern ECMAScript features$/;"	p	class:module.exports.parserOptions
+engines	package.json	/^  "engines": {$/;"	o
+env	.eslintrc.js	/^  env: {$/;"	c	class:module.exports
+eslint	package.json	/^    "eslint": "^6.8.0",$/;"	s	object:devDependencies
+eslint-config-prettier	package.json	/^    "eslint-config-prettier": "^6.9.0",$/;"	s	object:devDependencies
+eslint-loader	package.json	/^    "eslint-loader": "^3.0.3",$/;"	s	object:devDependencies
+eslint-plugin-vue	package.json	/^    "eslint-plugin-vue": "^6.1.2"$/;"	s	object:devDependencies
+eslint.validate	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	a
+experimentalDecorators	tsconfig.json	/^    "experimentalDecorators": true$/;"	b	object:compilerOptions
+exports	.eslintrc.js	/^module.exports = {$/;"	c	class:module
+exports	.postcssrc.js	/^module.exports = {$/;"	c	class:module
+exports	babel.config.js	/^module.exports = {$/;"	c	class:module
+extends	tsconfig.json	/^  "extends": "@quasar\/app\/tsconfig-preset",$/;"	s
+extraFileExtensions	.eslintrc.js	/^    extraFileExtensions: ['.vue'],$/;"	p	class:module.exports.parserOptions
+i18n	src/boot/i18n.ts	/^    i18n: VueI18n;$/;"	p	interface:Vue
+i18n	src/boot/i18n.ts	/^export const i18n = new VueI18n({$/;"	C
+id	src/components/models.ts	/^  id: number;$/;"	p	interface:Todo
+landingPage (landingpagetemplate)	README.md	/^# landingPage (landingpagetemplate)$/;"	c
+lint	package.json	/^    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .\/",$/;"	s	object:scripts
+name	package.json	/^  "name": "landingpagetemplate",$/;"	s
+node	package.json	/^    "node": ">= 10.18.1",$/;"	s	object:engines
+npm	package.json	/^    "npm": ">= 6.13.4",$/;"	s	object:engines
+parser	.eslintrc.js	/^    parser: '@typescript-eslint\/parser',$/;"	p	class:module.exports.parserOptions
+parserOptions	.eslintrc.js	/^  parserOptions: {$/;"	c	class:module.exports
+plugins	.postcssrc.js	/^  plugins: [$/;"	p	class:module.exports
+presets	babel.config.js	/^  presets: [$/;"	p	class:module.exports
+private	package.json	/^  "private": true,$/;"	b
+productName	package.json	/^  "productName": "landingPage",$/;"	s
+project	.eslintrc.js	/^    project: resolve(__dirname, '.\/tsconfig.json'),$/;"	p	class:module.exports.parserOptions
+q-app	src/index.template.html	/^    <div id="q-app"><\/div>$/;"	I
+quasar	package.json	/^    "quasar": "^1.9.5",$/;"	s	object:dependencies
+recommendations	.vscode/extensions.json	/^  "recommendations": [$/;"	a
+resolutions	package.json	/^  "resolutions": {$/;"	o
+root	.eslintrc.js	/^  root: true,$/;"	p	class:module.exports
+routes	src/router/routes.ts	/^const routes: RouteConfig[] = [$/;"	C
+scripts	package.json	/^  "scripts": {$/;"	o
+sourceType	.eslintrc.js	/^    sourceType: 'module' \/\/ Allows for the use of imports$/;"	p	class:module.exports.parserOptions
+test	package.json	/^    "test": "echo \\"No test specified\\" && exit 0"$/;"	s	object:scripts
+totalCount	src/components/models.ts	/^  totalCount: number;$/;"	p	interface:Meta
+tsconfigRootDir	.eslintrc.js	/^    tsconfigRootDir: __dirname,$/;"	p	class:module.exports.parserOptions
+typescript.tsdk	.vscode/settings.json	/^  "typescript.tsdk": "node_modules\/typescript\/lib",$/;"	s
+unwantedRecommendations	.vscode/extensions.json	/^  "unwantedRecommendations": [$/;"	a
+version	package.json	/^  "version": "0.0.1",$/;"	s
+vetur.experimental.templateInterpolationService	.vscode/settings.json	/^  "vetur.experimental.templateInterpolationService": true$/;"	b
+vetur.format.enable	.vscode/settings.json	/^  "vetur.format.enable": false,$/;"	b
+vetur.validation.template	.vscode/settings.json	/^  "vetur.validation.template": false,$/;"	b
+vue-class-component	package.json	/^    "vue-class-component": "^7.2.2",$/;"	s	object:dependencies
+vue-i18n	package.json	/^    "vue-i18n": "^8.0.0",$/;"	s	object:dependencies
+vue-property-decorator	package.json	/^    "vue-property-decorator": "^8.3.0"$/;"	s	object:dependencies
+yarn	package.json	/^    "yarn": ">= 1.21.1"$/;"	s	object:engines
