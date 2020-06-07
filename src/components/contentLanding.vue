@@ -1,22 +1,25 @@
 <template>
   <div class="q-mx-xl text-grey-8">
-    <q-card flat class="q-my-xl">
-      <q-card-section>
-        <div class="text-h2">Amet fugiat veniam dolor</div>
-      </q-card-section>
-    </q-card>
+    <div class="q-mt-xl" :class="$q.screen.gt.md ? 'text-h2' : 'text-h3'">
+      Amet fugiat veniam dolor
+    </div>
 
+    <div
+      class="text-grey-6 q-my-lg"
+      :class="$q.screen.gt.md ? 'text-h3' : 'text-h4'"
+    >
+      Ipsum ut id labore excepturi quaerat. Placeat alias.
+    </div>
     <div class="row">
-      <q-card class="col-8" flat>
+      <q-card class="col-12 col-md-8" flat>
         <q-card-section>
-          <div class="text-h3 text-grey-6 q-mb-xl">
-            Ipsum ut id labore excepturi quaerat. Placeat alias.
-          </div>
-
           <div class="row items-center">
-            <div class="text-h5 q-mt-xl row">
+            <div
+              class="q-mt-xl row"
+              :class="$q.screen.gt.md ? 'text-h4' : 'text-h5'"
+            >
               <div class="col-3 self-center row justify-center">
-                <q-icon name="drafts" class="text-h1 text-primary icon" />
+                <q-icon name="drafts" class="text-h1 text-grey-4 icon" />
               </div>
               <div class="col-9">
                 Ipsum doloremque hic hic excepturi rem aliquid Amet laborum
@@ -26,9 +29,12 @@
               </div>
             </div>
 
-            <div class="text-h5 q-mt-xl row">
+            <div
+              class="q-mt-xl row"
+              :class="$q.screen.gt.md ? 'text-h4' : 'text-h5'"
+            >
               <div class="col-3 self-center row justify-center">
-                <q-icon name="fingerprint" class="text-h1 text-primary" />
+                <q-icon name="fingerprint" class="text-h1 text-grey-5" />
               </div>
               <div class="col-9">
                 Ipsum doloremque hic hic excepturi rem aliquid Amet laborum
@@ -41,7 +47,7 @@
         </q-card-section>
       </q-card>
 
-      <q-card class="col-4 self-center" flat>
+      <q-card class="col-10 col-md-4 self-center" flat>
         <q-card-section>
           <!-- svg{{{1 -->
           <svg data-name="Layer 1" viewBox="0 0 802 590" width="100%">

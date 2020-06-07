@@ -1,24 +1,25 @@
 <template>
   <q-header>
-    <q-toolbar class="primary text-grey-2">
+    <q-toolbar class="primary text-grey-4">
       <q-toolbar-title>
         <q-icon name="graphic_eq" class="text-h3" />
         {{ title }}
       </q-toolbar-title>
-      <div>
-        <q-btn
-          v-for="button in buttons"
-          :key="button.id"
-          flat
-          :label="button.name"
-          :to="button.route"
-        />
-      </div>
       <q-space />
-      <div class="q-ml-lg">
-        <q-btn flat label="login" />
-        <q-btn rounded outline label="signup" />
-      </div>
+      <!-- TODO : add modal to button -->
+      <!-- slide transition of button when user reach the end of the jumbo -->
+      <q-slide-transition>
+        <q-btn
+          v-if="scrollPosition > 730"
+          color="secondary"
+          rounded
+          text-color="primary"
+          icon="check"
+          label="join us"
+        />
+      </q-slide-transition>
+      <!-- scrollObserver to check scrollPosition with onScroll method -->
+      <q-scroll-observer @scroll="onScroll" />
     </q-toolbar>
   </q-header>
 </template>
@@ -49,10 +50,10 @@
     //datas{{{1
     title = 'Title';
     logo = 'SVGlogo';
+    scrollPosition = 0;
     buttons: Button = {
       home: { name: 'home', route: '/' },
       products: { name: 'products', route: '/products' },
-      pricing: { name: 'contact', route: '/contact' },
       aboutUs: { name: 'about us', route: '/about' }
     };
     // get the store from TaskStore
@@ -60,6 +61,9 @@
     // somedata:string = "some"
     //}}}
     //methods{{{1
+    onScroll(info: any): void {
+      this.scrollPosition = info.position;
+    }
     //submitForm(): void {
     //// send taskToSubmit to store
     //this.store.updateTasksAction({
@@ -69,17 +73,9 @@
     //}
     //}}}
     //computed{{{1
-    // get data from store : computed method
-    // don't use getter because no manipulation before get it
-    // use getters to manipulate datas before getting them
-
-    //get searchField(): string {
-    //return this.store.searchField;
-    //}
-    //set searchField(term: string) {
-    //this.store.setSearchFieldAction(term);
-    //}
-
+    get currentLink() {
+      return this.$route.path;
+    }
     //}}}
     //hooks{{{1
     //mounted() {

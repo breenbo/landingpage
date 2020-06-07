@@ -1,7 +1,5 @@
 <template>
-  <q-page padding>
-    <div>Products</div>
-  </q-page>
+  <div>About - 'Find us google map'</div>
 </template>
 
 <script lang="ts">
@@ -22,7 +20,7 @@
     //}
     //}}}
   })
-  export default class Products extends Vue {
+  export default class About extends Vue {
     //props{{{1
     //@Prop(String) readonly someProp!: string
     //}}}

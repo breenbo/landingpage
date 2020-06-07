@@ -11,7 +11,7 @@
         :srcset="`${imgJumbo}.webp`"
         :src="`${imgJumbo}.jpg`"
       />
-        <div v-else-if="$q.screen.gt.xs" class="col-sm-4 self-center paw">
+        <div class="col-sm-4">
             <!-- paw {{{1 -->
             <svg  width="90%" viewBox="99.5 63.5 417 510" enable-background="new 99.5 63.5 417 510" xml:space="preserve">
 
@@ -90,9 +90,7 @@
             </svg>
             <!-- }}} -->
         </div>
-        <div class="col-11 col-sm-7 col-md-6"
-             :class="$q.screen.gt.xs ? 'q-mt-xl':'q-mt-xs'"
-            >
+        <div class="col-11 col-sm-7 col-md-6">
             <div class="col"
                  :class="$q.screen.gt.sm ? 'text-h4':'text-h5'"
                 >Find your way,</div>
@@ -100,6 +98,7 @@
                  :class="$q.screen.gt.sm ? 'q-mb-lg':'q-mb-md'"
                 >Become yourself</div>
             <form-module buttonText="get free stuff" class="col"/>
+            <socials class="col"/>
         </div>
       </div>
     </q-card>
@@ -186,6 +185,13 @@
     left: 0
 
   .paw
+    position: absolute
     margin: 0 auto
+    left: 0
+    max-height: 100px
+    top: 10%
 
+  .formContainer
+    position: absolute
+    bottom: 10px
 </style>

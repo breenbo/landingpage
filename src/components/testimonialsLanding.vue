@@ -8,9 +8,10 @@
       </q-card>
     </div>
     <div class="row q-gutter-xl q-mx-xl q-my-sm">
-      <q-card class="col q-my-xl" v-for="n in 3" :key="n">
+      <q-card class="col q-my-xl" v-for="n in 2" :key="n" flat>
         <q-avatar size="150px" class="avatar">
           <q-img
+            srcset="statics/img/profilSmall.webp"
             src="statics/img/profilSmall.jpg"
             spinner-color="primary"
             spinner-size="82px"
@@ -20,11 +21,11 @@
           <div class="text-h6">Our Changing Planet</div>
           <div class="text-grey-6 text-subtitle2">by John Doe</div>
         </q-card-section>
-        <q-card-section class="text-h5 text-grey-7 q-pl-lg">
+        <q-card-section class="text-h5 text-grey-7 q-px-xl">
           Consectetur ab reiciendis perferendis obcaecati ea sint Quod
           consectetur recusandae eos voluptates vitae officiis? Quidem dolorum
           atque ratione ab deserunt. Voluptatibus reprehenderit consequatur
-          quaerat eveniet
+          quaerat eveniet.
         </q-card-section>
       </q-card>
     </div>

@@ -1,30 +1,27 @@
 <template>
   <div class="bg-primary text-white q-mt-xl">
-    <div class="row q-gutter-md q-mx-md">
-      <div class="col text-caption q-ma-lg">
+    <div class="row q-gutter-md">
+      <socials class="col-12 col-sm-5 col-md-3 col-lg-2" />
+      <div class="col-12 col-sm-6 col-md-8 col-lg-3 text-caption">
         Sit alias corrupti corporis consequatur at. Ducimus exercitationem
         delectus animi aspernatur eius commodi, soluta Animi minima placeat est
         iste vitae animi delectus Est nulla et nihil maiores porro perferendis
         Nam!
       </div>
-      <div class="col text-caption q-ma-lg">
-        Sit alias corrupti corporis consequatur at. Ducimus exercitationem
-        delectus animi aspernatur eius commodi, soluta Animi minima placeat est
-        iste vitae animi delectus Est nulla et nihil maiores porro perferendis
-        Nam!
-      </div>
-      <div class="col text-caption q-ma-lg">
-        Sit alias corrupti corporis consequatur at. Ducimus exercitationem
-        delectus animi aspernatur eius commodi, soluta Animi minima placeat est
-        iste vitae animi delectus Est nulla et nihil maiores porro perferendis
-        Nam!
-      </div>
-      <div class="col text-caption q-ma-lg">
-        Sit alias corrupti corporis consequatur at. Ducimus exercitationem
-        delectus animi aspernatur eius commodi, soluta Animi minima placeat est
-        iste vitae animi delectus Est nulla et nihil maiores porro perferendis
-        Nam!
-      </div>
+      <template v-if="$q.screen.gt.md">
+        <div class="col-lg-3 text-caption">
+          Sit alias corrupti corporis consequatur at. Ducimus exercitationem
+          delectus animi aspernatur eius commodi, soluta Animi minima placeat
+          est iste vitae animi delectus Est nulla et nihil maiores porro
+          perferendis Nam!
+        </div>
+        <div class="col-lg-3 text-caption">
+          Sit alias corrupti corporis consequatur at. Ducimus exercitationem
+          delectus animi aspernatur eius commodi, soluta Animi minima placeat
+          est iste vitae animi delectus Est nulla et nihil maiores porro
+          perferendis Nam!
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -32,11 +29,13 @@
 <script lang="ts">
   //Imports{{{1
   import { Vue, Component } from 'vue-property-decorator';
+  import socials from 'components/socials.vue';
   // use store datas
   //}}}
 
   @Component({
     //declare components{{{1
+    components: { socials }
     //}}}
     //filter{{{1
     //filters: {

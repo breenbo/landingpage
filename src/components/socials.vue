@@ -1,6 +1,6 @@
 <template>
-  <div class="row text-h5 text-right svgContainer">
-    <div class="col">
+  <div class="row justify-around items-center text-h5 text-center">
+    <div class="col-3">
       <svg viewBox="126.445 2.281 589 589" fill="hsl(207,13%,30%)">
         <circle cx="420.945" cy="296.781" r="294.5" />
         <path
@@ -10,7 +10,7 @@
       </svg>
     </div>
 
-    <div class="col">
+    <div class="col-3">
       <svg viewBox="7.025 7.025 497.951 497.95" fill="hsl(207,13%,30%)">
         <path
           d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z"
@@ -18,7 +18,7 @@
       </svg>
     </div>
 
-    <div class="col">
+    <div class="col-3">
       <svg viewBox="126.444 2.281 589 589" fill="hsl(207,13%,30%)">
         <circle cx="420.944" cy="296.781" r="294.5" />
         <path
@@ -89,17 +89,12 @@
 
 <style scoped>
   svg {
-    width: 50%;
+    width: 90%;
   }
   svg:hover {
     fill: hsl(46, 100%, 50%);
     cursor: pointer;
     transition-property: fill;
     transition-duration: 600ms;
-  }
-  .svgContainer {
-    width: 50%;
-    position: absolute;
-    right: 0%;
   }
 </style>
