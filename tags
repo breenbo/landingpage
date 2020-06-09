@@ -25,18 +25,23 @@
 @typescript-eslint/eslint-plugin	package.json	/^    "@typescript-eslint\/eslint-plugin": "^2.17.0",$/;"	s	object:devDependencies
 @typescript-eslint/parser	package.json	/^    "@typescript-eslint\/parser": "^2.17.0",$/;"	s	object:devDependencies
 AnonymousFunction99fb84710100	quasar.conf.js	/^module.exports = configure(function (ctx) {$/;"	f
+AnonymousFunctioncf98aaec0100	src/store/login/state.js	/^export default function () {$/;"	f
 Build the app for production	README.md	/^### Build the app for production$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
 Button	src/components/models.ts	/^export interface Button {$/;"	i
 Customize the configuration	README.md	/^### Customize the configuration$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
 Install the dependencies	README.md	/^## Install the dependencies$/;"	s	chapter:landingPage (landingpagetemplate)
 Lint the files	README.md	/^### Lint the files$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+LoginStore	src/store/loginStore.ts	/^export default class LoginStore extends VuexModule {$/;"	c
 Meta	src/components/models.ts	/^export interface Meta {$/;"	i
 NODE_ENV	src/env.d.ts	/^    NODE_ENV: string;$/;"	p	interface:NodeJS.ProcessEnv
 NodeJS	src/env.d.ts	/^declare namespace NodeJS {$/;"	n
 ProcessEnv	src/env.d.ts	/^  interface ProcessEnv {$/;"	i	namespace:NodeJS
 Router	src/router/index.ts	/^  const Router = new VueRouter({$/;"	C
 Start the app in development mode (hot-code reloading, error reporting, etc.)	README.md	/^### Start the app in development mode (hot-code reloading, error reporting, etc.)$/;"	S	section:landingPage (landingpagetemplate)""Install the dependencies
+Store	src/store/index.ts	/^  const Store = new Vuex.Store<StoreInterface>({$/;"	C
+StoreInterface	src/store/index.ts	/^export interface StoreInterface {$/;"	i
 Todo	src/components/models.ts	/^export interface Todo {$/;"	i
+User	src/components/models.ts	/^export interface User {$/;"	i
 VUE_ROUTER_BASE	src/env.d.ts	/^    VUE_ROUTER_BASE: string | undefined;$/;"	p	interface:NodeJS.ProcessEnv
 VUE_ROUTER_MODE	src/env.d.ts	/^    VUE_ROUTER_MODE: 'hash' | 'history' | 'abstract' | undefined;$/;"	p	interface:NodeJS.ProcessEnv
 Vue	src/boot/i18n.ts	/^  interface Vue {$/;"	i
@@ -53,6 +58,7 @@ dependencies	package.json	/^  "dependencies": {$/;"	o
 description	package.json	/^  "description": "Landing Page",$/;"	s
 devDependencies	package.json	/^  "devDependencies": {$/;"	o
 ecmaVersion	.eslintrc.js	/^    ecmaVersion: 2018, \/\/ Allows for the parsing of modern ECMAScript features$/;"	p	class:module.exports.parserOptions
+email	src/components/models.ts	/^    email: string$/;"	p	interface:User
 engines	package.json	/^  "engines": {$/;"	o
 env	.eslintrc.js	/^  env: {$/;"	c	class:module.exports
 eslint	package.json	/^    "eslint": "^6.8.0",$/;"	s	object:devDependencies
@@ -60,18 +66,22 @@ eslint-config-prettier	package.json	/^    "eslint-config-prettier": "^6.9.0",$/;
 eslint-loader	package.json	/^    "eslint-loader": "^3.0.3",$/;"	s	object:devDependencies
 eslint-plugin-vue	package.json	/^    "eslint-plugin-vue": "^6.1.2"$/;"	s	object:devDependencies
 eslint.validate	.vscode/settings.json	/^  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],$/;"	a
+example	src/store/index.ts	/^    example: unknown;$/;"	p	interface:StoreInterface
 experimentalDecorators	tsconfig.json	/^    "experimentalDecorators": true$/;"	b	object:compilerOptions
 exports	.eslintrc.js	/^module.exports = {$/;"	c	class:module
 exports	.postcssrc.js	/^module.exports = {$/;"	c	class:module
 exports	babel.config.js	/^module.exports = {$/;"	c	class:module
 extends	tsconfig.json	/^  "extends": "@quasar\/app\/tsconfig-preset",$/;"	s
 extraFileExtensions	.eslintrc.js	/^    extraFileExtensions: ['.vue'],$/;"	p	class:module.exports.parserOptions
+formData	src/store/loginStore.ts	/^  public formData: User = {$/;"	p	class:LoginStore
 i18n	src/boot/i18n.ts	/^    i18n: VueI18n;$/;"	p	interface:Vue
 i18n	src/boot/i18n.ts	/^export const i18n = new VueI18n({$/;"	C
 id	src/components/models.ts	/^  id: number;$/;"	p	interface:Todo
 landingPage (landingpagetemplate)	README.md	/^# landingPage (landingpagetemplate)$/;"	c
 lint	package.json	/^    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .\/",$/;"	s	object:scripts
+login	src/store/index.ts	/^    login: unknown$/;"	p	interface:StoreInterface
 name	package.json	/^  "name": "landingpagetemplate",$/;"	s
+nickname	src/components/models.ts	/^    nickname: string,$/;"	p	interface:User
 node	package.json	/^    "node": ">= 10.18.1",$/;"	s	object:engines
 npm	package.json	/^    "npm": ">= 6.13.4",$/;"	s	object:engines
 parser	.eslintrc.js	/^    parser: '@typescript-eslint\/parser',$/;"	p	class:module.exports.parserOptions

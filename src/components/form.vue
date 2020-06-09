@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="formContainer">
     <q-form
       @submit.prevent="submitForm"
       class="q-gutter-md"
@@ -9,11 +9,12 @@
         v-model="formData.nickname"
         type="text"
         label="Nickname"
+        ref="nickname"
         color="secondary"
         class="text-h5"
         dark
         clearable
-        lazy-rules
+        lazy-rules="ondemand"
         :input-style="{ color: 'hsl(46,100%,90%)' }"
         :rules="[
           val => val.length >= 6 || 'Please choose nick with more than 6 chars.'
@@ -23,11 +24,12 @@
         v-model="formData.email"
         type="email"
         label="Email"
+        ref="email"
         color="secondary"
         class="text-h5"
         dark
         clearable
-        lazy-rules
+        lazy-rules="ondemand"
         :input-style="{ color: 'hsl(46,100%,90%)' }"
         :rules="[
           val => isValidEmailAdress(val) || 'Please enter a valid email adress'
@@ -42,25 +44,31 @@
           :class="$q.screen.gt.xs ? 'text-h5' : 'text-h6'"
           icon="check"
           rounded
-          @click="thank = true"
           >{{ buttonText }}</q-btn
         >
       </div>
     </q-form>
-    <!-- <q-dialog v-model="thank"> -->
-    <!--   <q-card> -->
-    <!--     <q-card-section class="row items-center"> -->
-    <!--       Thanks, your free stuff is coming -->
-    <!--     </q-card-section> -->
-    <!--   </q-card> -->
-    <!-- </q-dialog> -->
+    <q-dialog v-model="thankYou">
+      <q-card class="bg-secondary">
+        <q-card-section
+          class="row items-center"
+          :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          itaque.
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </div>
 </template>
 
 <script lang="ts">
   //Imports{{{1
   import { Vue, Component, Prop } from 'vue-property-decorator';
+  import { getModule } from 'vuex-module-decorators';
+  import { User } from 'components/models.ts';
   // use store datas
+  import LoginStore from '../store/loginStore';
   //}}}
 
   @Component({
@@ -80,14 +88,13 @@
     @Prop(String) readonly buttonText!: string;
     //}}}
     //datas{{{1
-    formData = {
-      nickname: '',
-      email: ''
+    loginStore = getModule(LoginStore);
+
+    formData: User = {
+      nickname: 'azertyu',
+      email: 'f@f.fr'
     };
-    thank = false;
-    // get the store from TaskStore
-    //store = getModule(TaskStore);
-    // somedata:string = "some"
+
     //}}}
     //methods{{{1
     isValidEmailAdress(email: string): boolean {
@@ -95,9 +102,14 @@
       return re.test(String(email).toLowerCase());
     }
 
-    submitForm(): string {
-      console.log('submit form');
-      return 'test';
+    submitForm(): void {
+      this.loginStore.logUserAction(this.formData);
+      this.loginStore.setThankYouAction(true);
+      this.formData.nickname = '';
+      this.formData.email = '';
+      // hide alert form
+      this.loginStore.setAlertAction(false);
+      //this.loginStore.logUserAction(this.formData);
     }
     //submitForm(): void {
     //// send taskToSubmit to store
@@ -108,6 +120,13 @@
     //}
     //}}}
     //computed{{{1
+    get thankYou() {
+      return this.loginStore.thankYou;
+    }
+
+    set thankYou(value: boolean) {
+      this.loginStore.setThankYouAction(value);
+    }
     // get data from store : computed method
     // don't use getter because no manipulation before get it
     // use getters to manipulate datas before getting them
@@ -129,4 +148,7 @@
 </script>
 
 <style scoped>
+  .formContainer {
+    width: 100%;
+  }
 </style>

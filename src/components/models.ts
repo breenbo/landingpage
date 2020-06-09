@@ -13,3 +13,8 @@ export interface Button {
         route: string;
     }
 }
+
+export interface User {
+    nickname: string,
+    email: string
+}

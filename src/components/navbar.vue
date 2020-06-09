@@ -4,13 +4,14 @@
       <q-toolbar-title>
         <!-- paw {{{1 -->
         <svg
+          id="pawLogo"
           class="q-mx-sm"
           width="25px"
           viewBox="99.5 63.5 417 510"
           enable-background="new 99.5 63.5 417 510"
           xml:space="preserve"
         >
-          <g fill="hsl(0,0%,90%)">
+          <g fill="hsl(0,0%,30%)">
             <path
               d="M273.36,69.94c4.761,4.76,2.721,10.88,2.04,16.32c-0.68,4.76,0.681,10.199-2.04,13.6
 
@@ -122,6 +123,12 @@
       <!-- modal with form for join us button -->
       <q-dialog v-model="alert">
         <q-card class="bg-primary" :class="$q.screen.gt.xs ? 'q-px-xl' : ''">
+          <q-card-section
+            class="text-amber-13 text-weight-light"
+            :class="$q.screen.gt.xs ? 'text-h2' : 'text-h3'"
+          >
+            Lorem ipsum
+          </q-card-section>
           <q-card-section class="row items-center">
             <formulaire buttonText="get free stuff" />
           </q-card-section>
@@ -137,7 +144,9 @@
   //Imports{{{1
   import { Vue, Component } from 'vue-property-decorator';
   import { Button } from 'components/models';
+  import { getModule } from 'vuex-module-decorators';
   // use store datas
+  import LoginStore from '../store/loginStore';
   //}}}
   import formulaire from 'components/form.vue';
 
@@ -161,10 +170,10 @@
     //@Prop(String) readonly someProp!: string
     //}}}
     //datas{{{1
+    loginStore = getModule(LoginStore);
     title = 'Name';
     logo = 'SVGlogo';
     scrollPosition = 0;
-    alert = false;
     buttons: Button = {
       home: { name: 'home', route: '/' },
       products: { name: 'products', route: '/products' },
@@ -190,6 +199,13 @@
     get currentLink() {
       return this.$route.path;
     }
+
+    get alert() {
+      return this.loginStore.alert;
+    }
+    set alert(value: boolean) {
+      this.loginStore.setAlertAction(value);
+    }
     //}}}
     //hooks{{{1
     //mounted() {
@@ -202,4 +218,8 @@
 </script>
 
 <style scoped>
+  #pawLogo {
+    position: relative;
+    top: 5px;
+  }
 </style>

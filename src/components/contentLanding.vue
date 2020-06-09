@@ -19,7 +19,7 @@
           ? 'text-h3 q-my-lg q-mx-xl'
           : $q.screen.gt.xs
           ? 'text-h4 q-my-lg q-mx-xl'
-          : 'text-h5 q-my-sm q-mx-lg'
+          : 'text-subtitle1 q-my-sm q-mx-lg'
       "
     >
       Ipsum ut id labore excepturi quaerat. Placeat alias.
@@ -260,7 +260,9 @@
 <script lang="ts">
   //Imports{{{1
   import { Vue, Component } from 'vue-property-decorator';
+  import { getModule } from 'vuex-module-decorators';
   // use store datas
+  import LoginStore from '../store/loginStore';
   //}}}
 
   @Component({
@@ -282,6 +284,7 @@
     //datas{{{1
     // get the store from TaskStore
     //store = getModule(TaskStore);
+    loginStore = getModule(LoginStore);
     // somedata:string = "some"
     //}}}
     //methods{{{1
