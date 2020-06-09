@@ -106,8 +106,8 @@
     loginStore = getModule(LoginStore);
 
     formData: User = {
-      nickname: 'azertyu',
-      email: 'f@f.fr'
+      nickname: '',
+      email: ''
     };
 
     nickname = '';
