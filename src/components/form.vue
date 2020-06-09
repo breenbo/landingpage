@@ -50,12 +50,14 @@
     </q-form>
     <q-dialog v-model="thankYou">
       <q-card class="bg-secondary">
-        <q-card-section
-          class="row items-center"
-          :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-          itaque.
+        <q-card-section class="row items-center">
+          <div :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'" class="q-my-lg">
+            Thank you {{ nickname | titleCase }}
+          </div>
+          <div :class="$q.screen.gt.sm ? 'text-h4' : 'text-subtitle1'">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            itaque.
+          </div>
         </q-card-section>
       </q-card>
     </q-dialog>
@@ -75,6 +77,11 @@
     //declare components{{{1
     //}}}
     //filter{{{1
+    filters: {
+      titleCase(word: string): string {
+        return `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+      }
+    }
     //filters: {
     //niceDate(value: string): string {
     //return date.formatDate(value, 'Do MMMM');
@@ -95,6 +102,8 @@
       email: 'f@f.fr'
     };
 
+    nickname = '';
+
     //}}}
     //methods{{{1
     isValidEmailAdress(email: string): boolean {
@@ -105,6 +114,7 @@
     submitForm(): void {
       this.loginStore.logUserAction(this.formData);
       this.loginStore.setThankYouAction(true);
+      this.nickname = this.formData.nickname;
       this.formData.nickname = '';
       this.formData.email = '';
       // hide alert form
