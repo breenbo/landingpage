@@ -4,7 +4,6 @@
       <jumbo />
       <contentLanding />
       <q-separator class="q-mt-xl" />
-      <!-- testimonials -->
       <testimonials />
     </q-page>
     <footerLanding />

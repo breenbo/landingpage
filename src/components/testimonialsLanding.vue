@@ -1,14 +1,31 @@
 <template>
   <div>
-    <div class="row q-mx-xl text-grey-8">
-      <q-card flat class="q-my-xl">
+    <div
+      class="row text-grey-8"
+      :class="$q.screen.gt.xs ? 'q-mx-xl' : 'q-mx-xs'"
+    >
+      <q-card flat :class="$q.screen.gt.sm ? 'q-my-xl' : 'q-my-md'">
         <q-card-section>
-          <div class="text-h2">Amet fugiat veniam dolor</div>
+          <div
+            :class="
+              $q.screen.gt.lg
+                ? 'text-h2'
+                : $q.screen.gt.xs
+                ? 'text-h3'
+                : 'text-h5'
+            "
+          >
+            Amet fugiat veniam dolor
+          </div>
         </q-card-section>
       </q-card>
     </div>
-    <div class="row q-gutter-xl q-mx-xl q-my-sm">
-      <q-card class="col q-my-xl" v-for="n in 2" :key="n" flat>
+    <!-- 2 testimonials for big screens -->
+    <div
+      class="row justify-around q-gutter-xl q-mx-xl q-my-sm"
+      v-if="$q.screen.gt.sm"
+    >
+      <q-card class="col q-my-xl testiCard" v-for="n in 2" :key="n" flat>
         <q-avatar size="150px" class="avatar">
           <q-img
             srcset="statics/img/profilSmall.webp"
@@ -22,6 +39,46 @@
           <div class="text-grey-6 text-subtitle2">by John Doe</div>
         </q-card-section>
         <q-card-section class="text-h5 text-grey-7 q-px-xl">
+          Consectetur ab reiciendis perferendis obcaecati ea sint Quod
+          consectetur recusandae eos voluptates vitae officiis? Quidem dolorum
+          atque ratione ab deserunt. Voluptatibus reprehenderit consequatur
+          quaerat eveniet.
+        </q-card-section>
+      </q-card>
+    </div>
+
+    <!-- 1 testimonial for big screens -->
+    <div class="row justify-center q-gutter-xl q-my-lg" v-else>
+      <q-card class="col q-my-xl testiCard" flat>
+        <q-avatar
+          :size="
+            $q.screen.gt.sm ? '150px' : $q.screen.gt.xs ? '120px' : '100px'
+          "
+          :class="
+            $q.screen.gt.sm
+              ? 'avatar'
+              : $q.screen.gt.xs
+              ? 'avatarMedium'
+              : 'avatarSmall'
+          "
+        >
+          <q-img
+            srcset="statics/img/profilSmall.webp"
+            src="statics/img/profilSmall.jpg"
+            spinner-color="primary"
+            spinner-size="82px"
+          />
+        </q-avatar>
+        <q-card-section v-if="$q.screen.gt.xs">
+          <div class="text-h6">Our Changing Planet</div>
+          <div class="text-grey-6 text-subtitle2">by John Doe</div>
+        </q-card-section>
+        <q-card-section
+          class="text-grey-7"
+          :class="
+            $q.screen.gt.xs ? 'q-px-xl text-h5' : 'q-px-lg text-subtitle1'
+          "
+        >
           Consectetur ab reiciendis perferendis obcaecati ea sint Quod
           consectetur recusandae eos voluptates vitae officiis? Quidem dolorum
           atque ratione ab deserunt. Voluptatibus reprehenderit consequatur
@@ -90,14 +147,34 @@
 </script>
 
 <style scoped>
-  .cardImage {
+  .cardImageBig {
     height: 30%;
+  }
+  .cardImageSmall {
+    height: 20%;
   }
   .avatar {
     border-radius: 50% !important;
     position: absolute;
     z-index: 5;
-    top: -28%;
+    top: -70px;
     right: 10%;
+  }
+  .avatarMedium {
+    border-radius: 50% !important;
+    position: absolute;
+    z-index: 5;
+    top: -40px;
+    right: 10%;
+  }
+  .avatarSmall {
+    border-radius: 50% !important;
+    position: absolute;
+    z-index: 5;
+    top: -90px;
+    right: 10%;
+  }
+  .testiCard {
+    max-width: 600px;
   }
 </style>

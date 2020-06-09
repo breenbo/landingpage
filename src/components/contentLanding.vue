@@ -1,12 +1,26 @@
 <template>
-  <div class="q-mx-xl text-grey-8">
-    <div class="q-mt-xl" :class="$q.screen.gt.md ? 'text-h2' : 'text-h3'">
+  <div class="text-grey-8">
+    <div
+      :class="
+        $q.screen.gt.lg
+          ? 'text-h2 q-mt-xl q-mx-xl'
+          : $q.screen.gt.xs
+          ? 'text-h3 q-mt-xl q-mx-xl'
+          : 'text-h5 q-mt-lg q-mx-lg'
+      "
+    >
       Amet fugiat veniam dolor
     </div>
 
     <div
-      class="text-grey-6 q-my-lg"
-      :class="$q.screen.gt.md ? 'text-h3' : 'text-h4'"
+      class="text-grey-6"
+      :class="
+        $q.screen.gt.lg
+          ? 'text-h3 q-my-lg q-mx-xl'
+          : $q.screen.gt.xs
+          ? 'text-h4 q-my-lg q-mx-xl'
+          : 'text-h5 q-my-sm q-mx-lg'
+      "
     >
       Ipsum ut id labore excepturi quaerat. Placeat alias.
     </div>
@@ -15,13 +29,19 @@
         <q-card-section>
           <div class="row items-center">
             <div
-              class="q-mt-xl row"
-              :class="$q.screen.gt.md ? 'text-h4' : 'text-h5'"
+              class="row"
+              :class="
+                $q.screen.gt.lg
+                  ? 'text-h4 q-my-lg'
+                  : $q.screen.gt.xs
+                  ? 'text-h5 q-my-lg'
+                  : 'text-subtitle1 q-my-sm'
+              "
             >
-              <div class="col-3 self-center row justify-center">
+              <div class="col-12 col-sm-3 self-center row justify-center">
                 <q-icon name="drafts" class="text-h1 text-grey-4 icon" />
               </div>
-              <div class="col-9">
+              <div class="col-12 col-sm-9">
                 Ipsum doloremque hic hic excepturi rem aliquid Amet laborum
                 alias in nihil assumenda! Id adipisci similique quibusdam
                 necessitatibus nobis quae porro? Voluptatibus omnis commodi
@@ -30,13 +50,19 @@
             </div>
 
             <div
-              class="q-mt-xl row"
-              :class="$q.screen.gt.md ? 'text-h4' : 'text-h5'"
+              class="row"
+              :class="
+                $q.screen.gt.lg
+                  ? 'text-h4 q-my-lg'
+                  : $q.screen.gt.xs
+                  ? 'text-h5 q-my-lg'
+                  : 'text-subtitle1 q-my-sm'
+              "
             >
-              <div class="col-3 self-center row justify-center">
+              <div class="col-12 col-sm-3 self-center row justify-center">
                 <q-icon name="fingerprint" class="text-h1 text-grey-5" />
               </div>
-              <div class="col-9">
+              <div class="col-12 col-sm-9">
                 Ipsum doloremque hic hic excepturi rem aliquid Amet laborum
                 alias in nihil assumenda! Id adipisci similique quibusdam
                 necessitatibus nobis quae porro? Voluptatibus omnis commodi
@@ -47,7 +73,7 @@
         </q-card-section>
       </q-card>
 
-      <q-card class="col-10 col-md-4 self-center" flat>
+      <q-card class="col-12 col-md-4 self-center" flat>
         <q-card-section>
           <!-- svg{{{1 -->
           <svg data-name="Layer 1" viewBox="0 0 802 590" width="100%">

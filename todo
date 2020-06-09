@@ -1,5 +1,3 @@
 - set imgs for screen sizes with srcset=""
-- add transition
-- add product and about page
-- add modal for login and signup
-- products : 3 horizontals cards + carousel for pricing
+- minimize panther.jpg
+- add modal to thank for getting free stuff, only if submit valid (check todoApp)

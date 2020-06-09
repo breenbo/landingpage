@@ -89,7 +89,7 @@
 
 <style scoped>
   svg {
-    width: 90%;
+    max-width: 60%;
   }
   svg:hover {
     fill: hsl(46, 100%, 50%);

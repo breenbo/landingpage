@@ -1,21 +1,27 @@
 <template>
-  <div class="bg-primary text-white q-mt-xl">
-    <div class="row q-gutter-md">
-      <socials class="col-12 col-sm-5 col-md-3 col-lg-2" />
-      <div class="col-12 col-sm-6 col-md-8 col-lg-3 text-caption">
+  <div
+    class="bg-primary text-white"
+    :class="$q.screen.gt.xs ? 'q-mt-xl' : 'q-mt-sm'"
+  >
+    <div class="row" :class="$q.screen.gt.xs ? 'q-mt-xl' : 'q-mt-sm'">
+      <socials
+        class="col-12 col-sm-5 col-md-3 col-lg-2"
+        :class="$q.screen.gt.xs ? 'q-my-lg' : 'q-mt-md'"
+      />
+      <div class="col-12 col-sm-6 col-md-8 col-lg-3 text-caption q-pa-md">
         Sit alias corrupti corporis consequatur at. Ducimus exercitationem
         delectus animi aspernatur eius commodi, soluta Animi minima placeat est
         iste vitae animi delectus Est nulla et nihil maiores porro perferendis
         Nam!
       </div>
       <template v-if="$q.screen.gt.md">
-        <div class="col-lg-3 text-caption">
+        <div class="col-lg-3 text-caption q-pa-md">
           Sit alias corrupti corporis consequatur at. Ducimus exercitationem
           delectus animi aspernatur eius commodi, soluta Animi minima placeat
           est iste vitae animi delectus Est nulla et nihil maiores porro
           perferendis Nam!
         </div>
-        <div class="col-lg-3 text-caption">
+        <div class="col-lg-3 text-caption q-pa-md">
           Sit alias corrupti corporis consequatur at. Ducimus exercitationem
           delectus animi aspernatur eius commodi, soluta Animi minima placeat
           est iste vitae animi delectus Est nulla et nihil maiores porro
