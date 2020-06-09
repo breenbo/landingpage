@@ -49,14 +49,22 @@
       </div>
     </q-form>
     <q-dialog v-model="thankYou">
-      <q-card class="bg-secondary">
+      <q-card class="bg-secondary thankCard">
         <q-card-section class="row items-center">
           <div :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'" class="q-my-lg">
             Thank you {{ nickname | titleCase }}
           </div>
-          <div :class="$q.screen.gt.sm ? 'text-h4' : 'text-subtitle1'">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-            itaque.
+          <div
+            class="row items-center"
+            :class="$q.screen.gt.sm ? 'text-h4' : 'text-subtitle1'"
+          >
+            <div class="col-3">
+              <q-icon name="check_circle_outline" size="4em" />
+            </div>
+            <div class="col-9 q-pl-md q-mb-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae, itaque.
+            </div>
           </div>
         </q-card-section>
       </q-card>
@@ -160,5 +168,8 @@
 <style scoped>
   .formContainer {
     width: 100%;
+  }
+  .thankCard {
+    max-width: 800px !important;
   }
 </style>

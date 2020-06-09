@@ -7,22 +7,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 src/App.vue
-badd +4 src/layouts/MainLayout.vue
-badd +4 src/pages/Landing.vue
-badd +3 src/pages/Products.vue
-badd +94 src/components/jumbo.vue
-badd +87 src/components/navbar.vue
-badd +17 src/components/footerLanding.vue
-badd +27 src/components/testimonialsLanding.vue
-badd +3 src/components/socials.vue
-badd +5 src/components/contentLanding.vue
-badd +5 src/components/form.vue
-badd +2 src/router/routes.ts
+badd +3 src/App.vue
+badd +22 src/components/jumbo.vue
+badd +138 src/components/navbar.vue
+badd +13 src/components/contentLanding.vue
+badd +64 src/components/form.vue
+badd +1 src/store/store/state.ts
+badd +2 src/store/login/state.js
+badd +14 src/store/loginStore.ts
+badd +15 src/components/models.ts
 argglobal
 %argdel
 $argadd src/App.vue
-edit src/components/footerLanding.vue
+edit src/components/form.vue
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -38,12 +35,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 5 - ((4 * winheight(0) + 25) / 50)
+let s:l = 174 - ((125 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 043|
+174
+normal! 03|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
