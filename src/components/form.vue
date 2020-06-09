@@ -52,7 +52,7 @@
       <q-card class="bg-secondary thankCard">
         <q-card-section class="row items-center">
           <div :class="$q.screen.gt.sm ? 'text-h2' : 'text-h4'" class="q-my-lg">
-            Thank you {{ nickname | titleCase }}
+            Thank you {{ formData.nickname | titleCase }}
           </div>
           <div
             class="row items-center"
@@ -105,10 +105,10 @@
     //datas{{{1
     loginStore = getModule(LoginStore);
 
-    formData: User = {
-      nickname: '',
-      email: ''
-    };
+    //formData: User = {
+    //nickname: '',
+    //email: ''
+    //};
 
     nickname = '';
 
@@ -122,11 +122,12 @@
     submitForm(): void {
       this.loginStore.logUserAction(this.formData);
       this.loginStore.setThankYouAction(true);
-      this.nickname = this.formData.nickname;
-      this.formData.nickname = '';
-      this.formData.email = '';
       // hide alert form
       this.loginStore.setAlertAction(false);
+
+      this.nickname = this.formData.nickname;
+      //this.formData.nickname = '';
+      //this.formData.email = '';
       //this.loginStore.logUserAction(this.formData);
     }
     //submitForm(): void {
@@ -144,6 +145,14 @@
 
     set thankYou(value: boolean) {
       this.loginStore.setThankYouAction(value);
+    }
+
+    get formData() {
+      return this.loginStore.formData;
+    }
+
+    set formData(userData: User) {
+      this.loginStore.logUserAction(userData);
     }
     // get data from store : computed method
     // don't use getter because no manipulation before get it
