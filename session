@@ -8,18 +8,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +3 src/App.vue
-badd +22 src/components/jumbo.vue
-badd +172 src/components/navbar.vue
-badd +13 src/components/contentLanding.vue
-badd +55 src/components/form.vue
-badd +1 src/store/store/state.ts
-badd +2 src/store/login/state.js
-badd +14 src/store/loginStore.ts
-badd +15 src/components/models.ts
+badd +353 src/components/contentLanding.vue
+badd +113 quasar.conf.js
+badd +0 src/components/testimonialsLanding.vue
 argglobal
 %argdel
 $argadd src/App.vue
-edit src/components/navbar.vue
+edit src/components/testimonialsLanding.vue
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -35,14 +30,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-198
-normal! zo
-let s:l = 207 - ((87 * winheight(0) + 25) / 50)
+let s:l = 2 - ((1 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-207
-normal! 0
+2
+normal! 042|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
